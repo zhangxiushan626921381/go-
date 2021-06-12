@@ -10,6 +10,9 @@ func main() {
 	m[2] = "张飞"
 	//在Map打印中如果没有出现定义的map  默认定义为空
 	//	fmt.Println("------",m[3],"------")
+	for v, k := range m {
+		fmt.Println(v, k)
+	}
 	v, ok := m[3]
 	if ok {
 		fmt.Println(v)
