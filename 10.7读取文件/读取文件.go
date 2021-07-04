@@ -69,7 +69,6 @@ func main() {
 	}
 	defer fp.Close()
 	r := bufio.NewReader(fp)
-
 	for {
 		b, err := r.ReadBytes('\n')
 		fmt.Println(string(b))
