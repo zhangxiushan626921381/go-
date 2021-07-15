@@ -32,7 +32,7 @@ func main() {
 		buf := make([]byte, 4096)
 		n, err := conn.Read(buf)
 		if n == 0 {
-			fmt.Println("监测到服务器关闭，服务器也关闭")
+			fmt.Println("监测到服务器关闭，客户端也关闭")
 			return
 		}
 		if err != nil {
