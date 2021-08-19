@@ -12,4 +12,5 @@ func main() {
 	user.Login()
 	user.Adduser()
 	user.Delete()
+	user.Adda(10, 20)
 }
