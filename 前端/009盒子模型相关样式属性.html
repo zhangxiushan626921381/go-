@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 280px;
+            background: palegreen;
+            /* 设置边框：
+            边框的粗细；
+            边框的线型：solid 实线；dashed：虚线；dotted：点线；
+            边框的颜色； */
+            border-top: 10px solid black;  
+            border-left: 10px dashed black;
+            border-right: 10px dashed black;
+            border-bottom: 10px solid black;
+            /* 同时设置四个边框 */
+            border:10px solid black;
+            /* 设置内边距:上下左右 也可以合在一起写(顺时针进行设置 上右下左）*/   
+            padding: 25px 30px 25px 30px;                                                            
+            padding-top: 25px ;
+            padding-bottom: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+            /* 分别设置上 左右  下 */
+            padding: 25px 30px 25px ; 
+            /* 分别设置上下和左右 */
+            padding: 25px 30px; 
+            /* 设置四个边的padding值 */
+            padding: 25px;
+            /* 设置外边距:上下左右 也可以合在一起写(顺时针进行设置 上右下左）*/   
+            margin: 25px 30px 25px 30px;                                                            
+            margin-top: 25px ;
+            margin-bottom: 25px;
+            margin-left: 25px;
+            margin-right: 25px;
+            /* 分别设置上 左右 下*/
+            margin: 25px 30px 25px ; 
+            /* 分别设置上下和左右 */
+            margin: 25px 30px; 
+            /* 设置四个边的margin值 */
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        元素在页面中显示成一个方块，类似一个盒子，css盒子模型就是使用现实中盒子来比喻，帮助我们设置元素对应的样式，盒子模型如下所示
+
+把元素叫做盒子，设置对应的样式为：盒子的宽度(width)，盒子的高度(height)，盒子的边框(border)，盒子内的内容和边框之间的间距(padding)，盒子与盒子之间的间距(margin)。
+    </div>
+</body>
+</html>

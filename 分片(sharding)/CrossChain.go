@@ -49,7 +49,7 @@ func InsertUser(TT Transaction) bool {
 		return false
 	}
 	//准备sql语句
-	stmt, err := tx.Prepare("INSERT INTO transactions (`id`,`Sender`,`Receiver`,`SenderShard`,`ReceiverShard`,`IsCrossChain`) VALUES (?,?,?,?,?,?)")
+	stmt, err := tx.Prepare("INSERT INTO transactions4 (`id`,`Sender`,`Receiver`,`SenderShard`,`ReceiverShard`,`IsCrossChain`) VALUES (?,?,?,?,?,?)")
 	if err != nil {
 		fmt.Println("prepare fail", err)
 		return false
@@ -69,22 +69,22 @@ func InsertUser(TT Transaction) bool {
 
 func main() {
 	Init()
-	ShardNum := 10 //分片的数量
-	TxNum := 1000  //交易的总数
-	UserNum := 100 //用户的数量
+	ShardNum := 6 //分片的数量
+	TxNum := 100  //交易的总数
+	UserNum := 12 //用户的数量
 	var UserNumInChain int = UserNum / ShardNum
 	var Tx []Transaction
-	Tx = make([]Transaction, 100001)
+	Tx = make([]Transaction, 101)
 	var CrossChainCount = 0
 	var Shard string
 	//生产交易
 	for i := 0; i < TxNum; i++ { //循环生成交易
 		//TransAction := make([][]int, 100001)
 		//rand.Seed(time.Now().Uni xNano()) //随机数种子
-		Tx[TxNum].Sender = rand.Intn(99)            //随机生成发送方
-		Tx[TxNum].Receiver = rand.Intn(99)          //随机生成接收方
+		Tx[TxNum].Sender = rand.Intn(12)            //随机生成发送方
+		Tx[TxNum].Receiver = rand.Intn(12)          //随机生成接收方
 		if Tx[TxNum].Sender == Tx[TxNum].Receiver { //如果相等则重新生成接收方
-			Tx[TxNum].Receiver = rand.Intn(99)
+			Tx[TxNum].Receiver = rand.Intn(12)
 		}
 		Tx[TxNum].SenderShard = Tx[TxNum].Sender / UserNumInChain
 		Tx[TxNum].ReceiverShard = Tx[TxNum].Receiver / UserNumInChain

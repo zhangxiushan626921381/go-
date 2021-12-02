@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            background-color: burlywood;
+        }
+        .big:hover{
+            background-color: rgb(124, 124, 138);
+        }
+    </style>
+</head>
+<body>
+    <h3>用户注册</h3>
+
+    <form action="">
+        <p>
+        <label for="" class="user">用户名：</label>
+        <input type="text" name="name">
+        </p>
+        <p>   
+        <label for="">密&nbsp;&nbsp;&nbsp;码：</label>
+        <input type="password" name="mima" id="">
+        </p>
+        <p>
+            <label for="">性&nbsp;&nbsp;&nbsp;别：</label>
+            <input type="radio" name="gender" value="0" id="">男
+            <input type="radio" name="gender" value="1" id="">女
+        </p>
+        <p>
+            <label for="">爱&nbsp;&nbsp;&nbsp;好：</label>
+            <input type="checkbox" name="hobby" value="programme">  编程
+            <input type="checkbox" name="hobby" value="study">  学习
+            <input type="checkbox" name="hobby" value="qiche">  骑车
+            <input type="checkbox" name="hobby" value="game">  游戏
+            <input type="checkbox" name="hobby" value="read">  看书
+        </p>
+        <p>
+            <label for="照片">照&nbsp;&nbsp;&nbsp;片：</label>
+            <input type="file" name="pic" id="">
+        </p>
+        <p>
+            <label for="籍贯">籍&nbsp;&nbsp;&nbsp;贯：</label>
+            <select name="site" id="">
+                <option value="0">北京</option>
+                <option value="1">山西</option>
+                <option value="2">西安</option>
+            </select>
+        </p>
+        <p>
+            <label for="">简&nbsp;&nbsp;&nbsp;介：</label>
+            <textarea name="info" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="提交表单">
+            <input type="reset"  value="重置表单">
+            <input class="big"  type="button" value="普通按钮">
+        </p>
+    </form>
+</body>
+</html>

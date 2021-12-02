@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            margin: 50px auto;
+            /* 将父级设置为相对定位，不设置偏移值，父级就有定位属性了，而且不移动，子级可以进行绝对定位 */
+            position: relative;
+            /* 隐藏超出的内容 */
+            overflow: hidden;
+        }
+        .box1,.box2,.box3{
+            width: 200px;
+            height: 80px;
+            margin: 10px;
+            position: absolute;
+        }
+      
+        .box1{
+            background: green;
+            left: 0px;
+            top: 0px;
+            z-index: 3;
+        }
+        .box2{
+            background:red ;
+            left: 50px;
+            top: 50px;
+            z-index: 2;
+        }
+        .box3{
+            background: royalblue;
+            left: 100px;
+            top: 100px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box1">
+            1
+        </div>
+        <div class="box2">
+            2
+        </div>
+        <div class="box3">
+            3    
+        </div>
+    </div>
+</body>
+</html>
