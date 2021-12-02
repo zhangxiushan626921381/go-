@@ -38,11 +38,10 @@ func Recursion(Tc []string) []string {
 	return Tc
 }
 func main() {
-	//循环遍历交易
-
+	//循环遍历交易数据   得到每一个分片的账户和交易总数
 	var Ts []string //交易集合切片
 	for i := 0; i < max; i++ {
-		Recursion(Ts)
-		fmt.Println(TC[i].Tc)
+		Recursion(Ts)                    //调用函数
+		fmt.Println(TC[i].Tc, TC[i].num) //输出交易集合切片内容和次数
 	}
 }
