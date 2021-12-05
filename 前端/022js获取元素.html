@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //当整个页面加载完之后，再执行大括号里面的代码
+        window.onload=function() {
+            var odiv=document.getElementById('div1');
+            odiv.style.color='blue';
+            odiv.style.width='300px';
+            odiv.style.height='300px';
+            odiv.style.background='red';
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">这是一个div</div>
+</body>
+</html>

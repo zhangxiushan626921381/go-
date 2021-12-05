@@ -32,7 +32,7 @@ func noempty(data []string) []string {
 	for _, str := range data {
 		if str != "" {
 			out = append(out, str)
-		} //取到空字符串无作为
+		} //取到空字符串z`无作为
 	}
 	return out
 }

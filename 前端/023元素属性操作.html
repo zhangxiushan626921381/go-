@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var odiv=document.getElementById('div1');
+            // 读属性值
+            var iid=odiv.id
+           // alert(iid)
+            //写属性值
+            odiv.style.color='green';
+            odiv.style.fontSize='30px';
+            //操作元素包裹的内容
+            //读取包裹的内容
+            var str=odiv.innerHTML;
+            //写元素包裹的内容
+            odiv.innerHTML='改变的文字'
+            odiv.innerHTML='<div>你是猪</div>'
+             }
+    </script>
+</head>
+<body>
+    <div id="div1">jjjjjjjjjjjjjjjj</div>
+</body>
+</html>
